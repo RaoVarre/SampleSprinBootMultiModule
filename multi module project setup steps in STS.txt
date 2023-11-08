@@ -1,0 +1,29 @@
+STS tool - steps for multi module - project structure
+-------------------------------------------------
+
+1. spring starter project -
+2. make packaging as pom in pom.xml
+3. remove build tag from pom.xml
+4. click on new -> other -> maven -> Maven Module
+5. click on both check boxes
+6. give module name 
+7. click on more button
+	b) click new 
+	c) cilck java
+	d) give working set name 
+	e) select working set content
+	f) finish
+8.check on working set -> ok -> -> next -> name as module name -> finish
+9. repeat 4 to 7 steps for other module creation
+10. remove all the folders and files from parent module except module folders and pom file
+11. remove pom.xml in all the parent and child modules from properties -> Maven -> Active Maven profiles -> erase pom.xml ->apply and close
+12. Go to Run configurations 
+	A) double click onJava Application
+		a) Name Configuration as Tomcat -> Select project which has main class
+															-> select Main Class (org.apache.catalina.startup.Tomcat)
+														-> click on run
+	B) double click on Spring Boot App	
+		a) Name Configuration as Main Class Module Name -> Select project which has main class
+														-> Main Type -> choose main class along with package (com.imginn.organization.ImgInnApplication)
+														-> click on run
+														
